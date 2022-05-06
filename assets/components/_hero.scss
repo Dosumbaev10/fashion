@@ -1,0 +1,67 @@
+.hero{
+    background: url(../img/hero/herofon.png);
+    background-size: cover;
+    background-position: center;
+    &__discription{
+        flex-wrap: nowrap;
+        @include font (500, 18px, $text-black);
+    }
+    &__details{
+        padding: 415px 0 80px 700px;
+        @include flex (center, flex-start, wrap)
+    }
+    &__link{
+        @include flex (center, center, nowrap)
+    }
+    &__discover,&__shop{
+        cursor: pointer;
+        background: #22262A;
+        @include font (500, 18px, $text-white);
+        text-align: center;
+        border: none;
+        width: 150px;
+        height: 30px;
+        padding-top: 3px;
+        margin-top: 30px;
+        margin-right: 35px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .hero{
+    &__content{
+        @include flex(flex-end,flex-end, nowrap);
+    }
+    &__details{
+        padding: 415px 0 80px 500px;
+    }
+    &__link{
+        @include flex (center, space-between, nowrap)
+    }
+}
+}
+
+@media screen and(max-width:992px) {
+    .hero{
+        &__details{
+        padding: 215px 0px 40px 0px;
+     } 
+}
+}
+@media screen and (max-width:560px) {
+  .hero{
+  &__content{
+    @include flex(flex-end,flex-start, nowrap);
+  }  
+  &__discover,&__shop{
+      margin-right: 10px;
+  }
+}
+}
+@media screen and (max-width:345px){
+    .hero{
+        &__discover,&__shop{
+            margin: 0 auto;
+        }
+    }
+}

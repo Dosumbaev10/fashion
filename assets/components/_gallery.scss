@@ -1,0 +1,63 @@
+.gallery{
+    &__content{
+        margin-top: 120px;
+        @include flex(center, center, wrap);
+    }
+    &__left{
+     max-height: 574px;
+    }
+    &__left--down{
+        margin-top: 14px;
+        @include flex(center, space-between, wrap);
+    }
+    &__right{
+        @include flex (flex-end,flex-start, wrap);
+        background: url(../img/gallery/downey.png);
+        margin-left: 30px;
+        width: 540px;
+        height: 574px;
+      &--img{
+          width: 540px;height: 574px;
+      }
+    }
+    &__category{
+        width: 203px;
+        height: 35px;
+       padding: 4px 23px;
+        margin-bottom: 25px;
+        margin-left: 25px;
+        @include flex (flex-end,flex-start, wrap);
+        background: #FFFFFF;
+        border: none;
+        @include font (500, 18px, $text-black);
+    }
+}
+
+@media (max-width:1200px){
+    .gallery{
+        &__content{
+            margin-top: 50px;
+        }
+        &__right{
+            margin: 20px 0 0 0;
+            padding: 0;
+        }
+        }
+        &__left{
+            width: 100%;
+            &--down{
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width:790px){
+     .gallery{
+         &__content{
+             margin-top: 20px;
+         }
+         &__right{
+             max-width: 100%;
+         }
+     }
+    }
+  

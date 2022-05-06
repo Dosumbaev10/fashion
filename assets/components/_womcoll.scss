@@ -1,0 +1,28 @@
+.womcoll{
+    &__content{
+        @include flex(center, space-between, wrap);
+    }
+    &__name{
+        @include font (600, 15px, $text-black);
+    }
+    &__details{
+        padding: 10px; ;
+    }
+    &__igure{
+        margin-top: 18px;
+        @include font(300, 15px, $text-black)
+    }
+    &__price{
+    margin-left: 35px;
+    }
+}
+@media (max-width:790px){
+    .womcoll{
+        &__details{
+        display: none;
+        &__content{
+            @include flex(center, center, wrap);
+        }
+    }
+    }
+}

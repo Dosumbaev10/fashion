@@ -1,0 +1,18 @@
+.mencoll{
+    &__content{
+        @include flex(center,space-between, wrap);
+    }
+    &__name{
+        @include font (600, 15px, $text-black);
+    }
+    &__details{
+        padding: 10px; ;
+    }
+}
+
+@media (max-width:790px){
+    .mencoll__details{
+        display: none;
+    }
+    }
+  

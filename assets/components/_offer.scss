@@ -1,0 +1,52 @@
+.offer{
+    background: url(../img/offer/bg.png);
+      background-size: cover;
+    background-position: center;
+    &__details{
+        padding: 369px 400px 70px 50px;
+    }
+    &__discription{
+        @include font (500, 18px, $text-black);
+    }
+    &__logo{
+        margin-top: 20px;
+    }
+    &__link{
+        margin-top: 20px;
+        width: 220px;
+        height: 35px;
+    }
+    &__discover{
+        padding: 4px 22px;
+        text-align: center;
+        background: #22262A;
+        @include font (500, 18px, $text-white);
+        text-align: center;
+        border: none;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .offer__content{
+        @include flex(flex-end,flex-start, nowrap);
+    }
+    .offer__details{
+        padding: none;
+    }
+   .offer{
+       &__details{
+       padding: 315px 400px 70px 50px;
+    } 
+    &__logo{
+        max-width:100%;
+    }
+}
+}
+@media screen and(max-width:992px) {
+    .offer{
+        &__details{
+        padding: 215px 0px 40px 0px;
+     } 
+}
+}
