@@ -10,6 +10,10 @@
         padding: 415px 0 80px 700px;
         @include flex (center, flex-start, wrap)
     }
+    &__logo{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     &__link{
         @include flex (center, center, nowrap)
     }
@@ -61,7 +65,10 @@
 @media screen and (max-width:345px){
     .hero{
         &__discover,&__shop{
-            margin: 0 auto;
+            margin: 5px;
+            width: 100px;
+            height: 25px;
+            @include font (400, 15px, $text-white);
         }
     }
 }

@@ -30,6 +30,7 @@
         background: #FFFFFF;
         border: none;
         @include font (500, 18px, $text-black);
+        cursor: pointer;
     }
 }
 
@@ -60,4 +61,10 @@
          }
      }
     }
-  
+  @media screen and (max-width:566px){
+      .gallery{
+        &__left--down{
+            display: none;
+        }
+      }
+    }

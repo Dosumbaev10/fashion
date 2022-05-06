@@ -23,6 +23,7 @@
         @include font (500, 18px, $text-white);
         text-align: center;
         border: none;
+        cursor: pointer;
     }
 }
 
