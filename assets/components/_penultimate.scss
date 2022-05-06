@@ -1,0 +1,129 @@
+.penultimate{
+    background: #F2F8FC;
+    &__content{   
+        @include flex(center, space-between, nowrap);
+    }
+    &__left{
+        max-width: 406px;
+        height: 290px;
+    }
+    &__right{
+        margin-top: 60px;
+    }
+    &__location{
+        margin-right: 20px;
+    }
+    &__link{
+        display: flex;
+        flex-wrap: nowrap;
+        @include font (400, 15px, $text-black);
+    } 
+    &__item{
+        margin-top: 15px;
+    }
+    &__join{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        border: none;
+        width: 400px;
+        height: 30px;
+    }
+    &__mail{
+        background: white;
+        border: none;
+        max-width: 300px;
+    }
+    &__adress{
+        margin-top: 15px;
+        &--logo{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 5px solid rgb(89, 102, 102);
+        }
+    }
+    .instagram:hover{
+        border-color: rgb(145, 12, 131);
+        box-shadow: 0px 0px 15px rgb(145, 12, 131);
+    }
+    .whatsapp:hover{
+        border-color: rgb(13, 180, 19);
+        box-shadow: 0px 0px 15px rgb(13, 180, 19);
+    }
+    .google:hover{
+        border-color: rgb(27, 177, 223);
+        box-shadow: 0px 0px 15px rgb(27, 177, 223);
+    }
+    .tiktok:hover{
+        border-color: rgb(78, 5, 6);
+        box-shadow: 0px 0px 15px rgb(78, 5, 6);
+    }
+    &__info{
+        @include flex(center, space-between, wrap);
+    }
+    &__name{
+        margin-bottom: 20px;
+    }
+
+}
+.info{
+    &__shop{
+        margin-top: 50px;
+        margin-right: 90px;
+    }
+    &__link1{
+        line-height: 3;
+        @include font (700, 18px, $text-black);
+    }
+    &__link{
+        line-height: 3;
+        @include font (400, 15px, $text-black);
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .penultimate{
+        &__left{
+            margin-bottom: 285px;
+        }
+    }
+}
+@media (max-width:992px){
+    .penultimate{
+        &__content{
+            @include flex(flex-start, space-between, wrap);
+        }
+    }
+}
+@media (max-width:992px){
+    .penultimate{
+        &__content{
+            @include flex(center, space-between, wrap);
+        }
+        &__left{
+            margin:0 auto;
+            @include flex(center, center, wrap);
+        }
+        &__logo{
+            margin-top: 15px;
+        }
+        &__right{
+            @include flex(center, center, wrap);
+        }
+    }
+}
+@media screen and(max-width:500px) {
+    .penultimate__join{
+        max-width: 300px;
+    }
+}
+@media screen and (max-width:517px) {
+    .penultimate{
+        &__info{
+            margin-bottom: 20px;
+        }
+    }
+}

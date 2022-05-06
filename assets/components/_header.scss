@@ -1,0 +1,131 @@
+.header{
+    &__content{
+        margin: 15px 0;
+        height: 50px;
+        @include flex(center, space-between, nowrap);
+    }
+    &__list{
+        @include flex(center, space-between, nowrap);
+    }
+    &__link{
+        margin-left: 20px;
+        @include font (400, 18px, $text-black)
+    }
+    &__search{
+        // text-align: center;
+        cursor: pointer;
+    }
+}
+    .img{
+        margin-bottom: 5px;
+    }
+    .img1{
+        margin-left:30px;
+    }
+.burger{
+    display: none;
+    position: relative;
+    cursor: pointer;
+    margin-top: -20px;
+    &__list{
+        display: none;
+        position: absolute;
+        top: 50px; right: 10px;
+    }
+    &__menu{
+      width: 30px;
+      height: 30px;
+      @include flex(center, space-between, wrap);
+    }
+    &__line{
+        width: 40px;
+        margin: 0 auto;
+        height: 40px;
+        border-radius: 35%;
+        border: 5px solid rgb(162, 176, 162);
+        box-shadow: 0px 0px 15px rgb(137, 152, 80);
+    }
+    &__close{
+        margin-top: 15px;
+        margin-left: 10px;
+        display: none;
+        @include font(450, 30px, rgb(237, 9, 59));
+        line-height: 0.3;
+    }
+    &__menu.active &__close{
+        display: flex;
+    }
+    &__menu.active &__line{
+        display: none;
+    }
+    &__menu.active ~ &__list{
+        display: block;
+    }
+// .img{
+//     width: 40px;height: 40px;
+// }
+}
+@media screen and (max-width:992px) {
+    .burger{
+        display: block;
+    }
+.header{
+    &__list{
+        display: none;
+    }
+}
+}
+
+@media screen and (max-width:998px) {
+
+}
+
+
+.burger1{
+    display: none;
+    position: relative;
+    cursor: pointer;
+    &__list{
+        display: none;
+        position: absolute;
+        top: 30px;right: 25px;
+    }
+    &__menu{
+      width: 30px;
+      height: 30px;
+      @include flex(center, space-between, wrap);
+    }
+    &__line{
+        background: #000;
+        width: 35px;
+        margin: 0 auto;
+        height: 4px;
+    }
+    &__close{
+        display: none;
+        @include font(600, 40px, $text-black);
+        line-height: 0.5;
+    }
+    &__menu.active &__close{
+        display: flex;
+    }
+    &__menu.active &__line{
+        display: none;
+    }
+    &__menu.active ~ &__list{
+        display: block;
+    }
+    .header__item{
+        margin-top: 15px;
+        text-align: center;
+    }
+
+}
+@media screen and(max-width:557px){
+    .burger1{
+        display: block;
+    }
+    .header__search{
+        display: none;
+    }
+}

@@ -1,0 +1,42 @@
+.container{
+    max-width: 1200px;
+padding: 0; 
+margin: 0 auto;
+cursor: default;
+}
+.swiper{
+  display: block;
+}
+.swiper-slide{
+    @include flex(center, center, nowrap);
+    flex-direction: column;
+}
+
+
+@media (max-width:1200px){
+    .container{
+        margin: 0 auto;
+        max-width:970px;
+    }
+}
+@media (max-width:992px){
+    .container{
+        margin: 0 auto;
+        max-width:750px;
+    }
+}
+@media (max-width:767px){
+    .container{
+        padding: 0 20px;
+        margin: 0 auto;
+        max-width:100%;
+    }
+}
+@media (min-width:790px){
+    .swiper{
+        margin: 0 auto;
+        max-width: 100%;
+        height: 400px;
+        display: none;
+    }
+}

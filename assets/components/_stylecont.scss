@@ -1,0 +1,55 @@
+.stylecont{
+    &__content{
+        margin-bottom: 100px;
+        @include flex(center, space-between, nowrap);
+    }
+    &__left{
+        width: 530px;
+        height: 500px;
+    }
+    &__right{
+        @include flex(flex-end, space-between, wrap);
+     background: url(../img/stylecont/style1.png);
+    width: 530px;height: 600px;
+    }
+    &__directions{
+        margin-left: 100px;
+        margin-bottom: 50px;
+        @include font (500, 15px, $text-black);
+        text-decoration: underline;
+    }
+}
+@media screen and (max-width:1200px) {
+    .stylecont{
+        &__content{
+    display: flex;
+    justify-content: center;
+    }
+    &__left{
+        height: 100%;
+    }
+    // &__right{
+    //     margin: 0 auto;
+    // }
+}
+}
+@media screen and (max-width:992px){
+    .stylecont{
+        &__content{
+            margin-bottom: 50px;
+            @include flex(center, center, wrap);}
+            &__left{
+                margin-bottom: 50px;
+            }
+}
+    }
+    @media screen and (max-width:577px){
+        .stylecont{
+            // &__content{
+            //     margin-bottom: 50px;
+            //     @include flex(center, center, wrap);}
+                &__left{
+                    margin-bottom: 30px;
+                }
+    }
+}

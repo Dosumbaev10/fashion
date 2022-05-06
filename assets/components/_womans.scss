@@ -1,0 +1,21 @@
+.womans{
+    margin-top: 114px;
+    margin-bottom: 65px;
+    @include flex(center, center, wrap);
+    &__content{
+        flex-direction: column;
+        @include flex(center, center, wrap);
+    }
+    &__name{
+        @include font (500, 18px, $text-black);
+    }
+    &__discription{
+        @include font (400, 15px, $text-black);
+    }
+}
+@media screen and(max-width:790px) {
+    .womans{
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+}
